@@ -5,18 +5,23 @@ int queue[MAX];
 int front = -1, rear = -1;
 
 // Enqueue function
+
 void enqueue() {
+    
     int x;
     printf("Please enter an element to enqueue: ");
     scanf("%d", &x);
+    
     if (isFull()) {
         printf("Overflow\n");
     } else {
+        
         if (isEmpty()) {
             front = 0;
         }
         rear = (rear + 1) % MAX;
         queue[rear] = x;
+       
         printf("%d enqueued into queue at index %d\n", x, rear);
     }
 }
@@ -26,6 +31,7 @@ void dequeue() {
     if (isEmpty()) {
         printf("Underflow\n");
     } else {
+       
         printf("%d dequeued from queue at index %d\n", queue[front], front);
         if (front == rear) {
             front = rear = -1; // Queue becomes empty
@@ -36,6 +42,7 @@ void dequeue() {
 }
 
 // Peek function
+
 void peek() {
     if (isEmpty()) {
         printf("Queue is empty!\n");
@@ -76,6 +83,7 @@ int main() {
     }
 
     // Check if queue is full
+    
     if (isFull()) {
         printf("The queue is full.\n");
     } else {
