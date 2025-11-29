@@ -5,6 +5,7 @@ int queue[MAX];
 int front = -1, rear = -1;
 
 // Enqueue function
+
 void enqueue() {
     int x;
     printf("Please enter an element to enqueue: ");
@@ -22,6 +23,7 @@ void enqueue() {
 }
 
 // Dequeue function
+
 void dequeue() {
     if (front == -1 || front > rear) { // Check if queue is empty
         printf("Underflow\n");
