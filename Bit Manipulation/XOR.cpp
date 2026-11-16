@@ -2,6 +2,7 @@
 using namespace std;
 
 // Function to calculate XOR of numbers from 1 to n
+
 int xor_1_to_n(int n) {
     // Pattern based on n % 4
     // 1. If n % 4 == 0 => result = n
@@ -15,6 +16,7 @@ int xor_1_to_n(int n) {
 }
 
 // Function to calculate XOR of numbers from L to R
+
 int xor_L_to_R(int L, int R) {
     // XOR(L to R) = XOR(1 to R) ^ XOR(1 to L-1)
     return xor_1_to_n(R) ^ xor_1_to_n(L - 1);
