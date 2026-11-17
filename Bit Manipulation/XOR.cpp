@@ -9,6 +9,7 @@ int xor_1_to_n(int n) {
     // 2. If n % 4 == 1 => result = 1
     // 3. If n % 4 == 2 => result = n + 1
     // 4. If n % 4 == 3 => result = 0
+    
     if (n % 4 == 0) return n;
     else if (n % 4 == 1) return 1;
     else if (n % 4 == 2) return n + 1;
